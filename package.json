@@ -1,0 +1,46 @@
+{
+  "name": "uxworks-components",
+  "version": "0.1.0",
+  "description": "components for uxworks.org",
+  "source": "src/index.ts",
+  "main": "dist/uxworks-components.js",
+  "module": "dist/uxworks-components.mjs",
+  "umd:main": "dist/uxworks-components.umd.js",
+  "repository": "https://github.com/IsAmrish/uxworks-components.git",
+  "author": "isamrish <askmaurya48@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "microbundle --jsx react",
+    "lint": "eslint src --ext .js,.ts,.tsx"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,json,md,mdx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-react-app": "^6.0.3",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.9.0"
+  }
+}
