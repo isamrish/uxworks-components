@@ -16,5 +16,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext"
-  }
+  },
+  "include": ["src/*"],
+  "exclude": ["dist", "node_modules", ".rts2_cache_*"]
 }

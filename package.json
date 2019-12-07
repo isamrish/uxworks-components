@@ -12,15 +12,17 @@
   "private": true,
   "scripts": {
     "build": "microbundle --jsx react",
-    "lint": "eslint src --ext .js,.ts,.tsx"
+    "lint": "eslint src --ext .js,.ts,.tsx",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "*.{js,ts,jsx}": [
+    "src/*.{js,ts,jsx}": [
       "eslint --fix",
       "prettier --write",
       "git add"
     ],
-    "*.{css,json,md,mdx}": [
+    "src/*.{css,json,md,mdx}": [
       "prettier --write",
       "git add"
     ]
@@ -31,6 +33,15 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.7",
+    "@storybook/addon-links": "^5.2.7",
+    "@storybook/addon-storysource": "^5.2.8",
+    "@storybook/addon-viewport": "^5.2.8",
+    "@storybook/addons": "^5.2.7",
+    "@storybook/react": "^5.2.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-react-app": "^6.0.3",
@@ -38,7 +49,13 @@
     "lint-staged": "^9.5.0",
     "microbundle": "^0.11.0",
     "prettier": "^1.19.1",
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-storybook-addon-props-combinations": "^1.1.0",
+    "styled-components": "^4.4.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.9.0"
