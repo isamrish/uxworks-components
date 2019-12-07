@@ -11,11 +11,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:pkg": "microbundle --jsx react",
+    "build": "microbundle --jsx React.createElement",
     "lint": "eslint src --ext .js,.ts,.tsx",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "npm run build-storybook"
+    "build:now": "build-storybook -c .storybook -o .storybook-dist",
+    "prepublishOnly": "npm run build-storybook"
   },
   "lint-staged": {
     "src/*.{js,ts,jsx}": [
