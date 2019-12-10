@@ -38,8 +38,8 @@ setDefaults({
           <pre
             style={{
               padding: "24px",
-              background: "#002b36",
-              color: "#93a1a1",
+              background: "#21212a",
+              color: "#fefefe",
               margin: 0,
               borderRadius: "0 0 3px 3px"
             }}

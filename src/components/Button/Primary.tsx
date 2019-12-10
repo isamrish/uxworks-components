@@ -1,12 +1,8 @@
-import React, { ButtonHTMLAttributes } from "react"
+import React from "react"
 import styled, { css } from "styled-components"
+import { ButtonProps } from './base'
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children: React.ReactNode,
-    size?: "large" | "small"
-}
-
-const Button = styled.button`
+const StyledPrimaryButton = styled.button`
   border: 1px solid #002de3;
   color: #ffffff;
   border-radius: 5px;
@@ -46,8 +42,8 @@ const Button = styled.button`
 
 export const PrimaryButton = (props: ButtonProps) => {
   return (
-    <Button {...props} type="button">
+    <StyledPrimaryButton {...props} type="button">
       {props.children}
-    </Button>
+    </StyledPrimaryButton>
   )
 }
